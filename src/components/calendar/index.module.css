@@ -1,0 +1,51 @@
+.calendarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toggleButton {
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.calendarPanel {
+  width: 280px;
+}
+
+.date, .weekDate {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.date {
+  cursor: pointer;
+}
+
+.date:hover {
+  background-color: goldenrod;
+}
+
+.calendarPanelWeek, .calendarPanelDate {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.visible {
+  background-color: #d8d8d8;
+}
+
+.today {
+  background-color: red;
+}
+
+.chosen {
+  background-color: green;
+}
