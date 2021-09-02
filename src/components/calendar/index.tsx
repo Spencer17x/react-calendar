@@ -5,10 +5,9 @@ import css from './index.module.css';
 
 const Calendar = () => {
   const [weeks] = useState(['日', '一', '二', '三', '四', '五', '六']);
-  const [showDates, setShowDates] = useState<Dayjs[]>([]);
-  const [showPanelDate, setShowPanelDate] = useState(dayjs());
-  const [selectedDates, setSelectedDates] = useState<Dayjs[]>([]);
-  const [clickedDate, setClickedDate] = useState();
+  const [showDates, setShowDates] = useState<Dayjs[]>([]); // 当前面板年月显示的所有日期
+  const [showPanelDate, setShowPanelDate] = useState(dayjs()); // 当前面板的年月
+  const [selectedDates, setSelectedDates] = useState<Dayjs[]>([]); // 选中的日期
 
   useEffect(() => {
     // 当月1号是周几
@@ -20,6 +19,10 @@ const Calendar = () => {
     setShowDates(nextValues);
   }, [showPanelDate])
 
+  /**
+   * 点击选中日期
+   * @param date
+   */
   const onClickDate = (date: Dayjs) => {
     const week = [0, 1, 2, 3, 4, 5, 6];
     const selectedDates = week.map(weekIndex => {

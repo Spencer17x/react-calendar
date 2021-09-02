@@ -20,17 +20,18 @@
   height: 40px;
   text-align: center;
   line-height: 40px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   box-sizing: border-box;
   user-select: none;
 }
 
 .date {
   cursor: pointer;
+  color: #ccc;
 }
 
 .date:hover {
-  background-color: goldenrod;
+  background-color: #F6F6F6FF;
 }
 
 .calendarPanelWeek, .calendarPanelDate {
@@ -39,13 +40,14 @@
 }
 
 .visible {
-  background-color: #d8d8d8;
+  color: #000;
 }
 
 .today {
-  background-color: red;
+  border: 2px solid  #3e8df5;
 }
 
 .chosen {
-  background-color: green;
+  background-color: #3e8df5!important;
+  color: #fff;
 }
