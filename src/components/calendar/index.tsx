@@ -11,7 +11,7 @@ const Calendar = () => {
 
   useEffect(() => {
     // 当月1号是周几
-    const firstDayOfMoth = dayjs().month(showPanelDate.month()).day();
+    const firstDayOfMoth = dayjs(showPanelDate).startOf('month').day();
     const nextValues = Array(42).fill(0).map((v, i) => {
       const renderDay = i - firstDayOfMoth + 1;
       return dayjs().year(showPanelDate.year()).month(showPanelDate.month()).date(renderDay);
